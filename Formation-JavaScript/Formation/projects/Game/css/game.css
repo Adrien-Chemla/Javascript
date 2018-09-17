@@ -1,0 +1,133 @@
+/*
+@author : Pierrick Juy
+@version : 1.0
+*/
+
+/* Global var */
+
+:root {
+	--main-background: url('images/bg3.png') repeat top left;
+	/* Fonts */
+	--main-font: arial, sans-serif;
+	--main-font-size: 16px;
+	--title-font: Times New Roman;
+	--title-font-size: 30px;
+	--title-font-style: italic;
+	/* Colors */
+	--main-color: #1a536f;
+	--secondary-color: #00222c;
+	--tertiary-color: #3d878a;
+	--gradient-linear: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+	/* heights */
+	--height-game: 600px;
+	--height-max: 120px;
+	--height-med: 60px;
+	--height-min: 40px;
+	/* Spaces */
+	--small-space: 10px;
+	--big-space: 120px;
+}
+
+/* Main */
+
+body {
+	background: var(--main-background);
+	font-family: var(--main-font);
+	font-size: var(--main-font-size);
+}
+
+/* Menu */
+
+.game-menu {
+	height: var(--height-med);
+	background: var(--gradient-linear);
+}
+
+.game-nav ul {
+	margin: 0;
+	height: var(--height-med);
+}
+
+.game-nav li {
+	display: block;
+	float: left;
+	height: var(--height-med);
+	padding: 0 20px;
+	line-height: var(--height-med);
+	color: white;
+	font-weight: bold;
+}
+
+#game-nav-id {
+	height: var(--height-med);
+	background: transparent;
+	border: none;
+	margin: 0;
+}
+
+/* Banner */
+
+.game-banner {
+	height: var(--height-max);
+}
+
+.game-title {
+	width: 1170px;
+	margin: 0 auto;
+	height: var(--height-max);
+	background: url("images/banner.png");
+	text-align: center;
+	font-family: var(--title-font);
+	font-size: var(--title-font-size);
+	font-style: var(--title-font-style);
+	line-height: var(--height-max);
+}
+
+/* Game Interface */
+
+#game-container canvas {
+	height: var(--height-game);
+	border: solid 4px var(--main-color);
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#game-container div.game-interface {
+	min-height: var(--height-game);
+	border: solid 4px var(--main-color);
+	background: rgba(255, 255, 255, 0.5);
+	float: left;
+}
+
+.game-header {
+	float: left;
+	width: 100%;
+	padding: var(--small-space);
+}
+
+.game-board {
+	float: left;
+	width: 100%;
+	padding: 0 0 0 var(--big-space);
+}
+
+.game-score {
+	width: 50%;
+	float: left;
+	color: var(--main-color);
+}
+
+.score-counter {
+	color: var(--tertiary-color);
+	font-size: var(--title-font-size);
+}
+
+.game-timer {
+	width: 50%;
+	float: left;
+	text-align: right;
+}
+
+.timer-counter {
+	color: var(--tertiary-color);
+	font-size: var(--title-font-size);
+}

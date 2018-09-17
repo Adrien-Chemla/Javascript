@@ -1,0 +1,229 @@
+/*
+@author : Pierrick Juy
+@version : 1.0
+*/
+
+/* Global var */
+
+:root {
+	--main-background: url('images/bg3.png') repeat top left;
+	/* Fonts */
+	--main-font: arial, sans-serif;
+	--main-font-size: 16px;
+	--title-font: Times New Roman;
+	--title-font-size: 30px;
+	--title-font-style: italic;
+	/* Colors */
+	--main-color: #1a536f;
+	--secondary-color: #00222c;
+	--tertiary-color: #3d878a;
+	--gradient-linear: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+	/* heights */
+	--height-social: 600px;
+	--height-max: 120px;
+	--height-med: 60px;
+	--height-min: 40px;
+	/* Spaces */
+	--small-space: 10px;
+	--big-space: 120px;
+}
+
+/* Main */
+
+body {
+	background: var(--main-background);
+	font-family: var(--main-font);
+	font-size: var(--main-font-size);
+}
+
+/* Menu */
+
+.social-menu {
+	height: var(--height-med);
+	background: var(--gradient-linear);
+}
+
+.social-nav ul {
+	margin: 0;
+	height: var(--height-med);
+}
+
+.social-nav li {
+	display: block;
+	float: left;
+	height: var(--height-med);
+	padding: 0 20px;
+	line-height: var(--height-med);
+	color: white;
+	font-weight: bold;
+}
+
+#social-nav-id {
+	height: var(--height-med);
+	background: transparent;
+	border: none;
+	margin: 0;
+}
+
+/* Banner */
+
+.social-banner {
+	height: var(--height-max);
+}
+
+.social-title {
+	width: 1170px;
+	margin: 0 auto;
+	height: var(--height-max);
+	background: url("images/banner.png");
+	text-align: center;
+	font-family: var(--title-font);
+	font-size: var(--title-font-size);
+	font-style: var(--title-font-style);
+	line-height: var(--height-max);
+}
+
+/* social Interface */
+
+#tweetsHeader {
+	background: #F9F9F9;
+	box-shadow: 0 2px 2px black;
+	padding: 10px;
+}
+
+.timerBox {
+	margin: 0 0 0 10px;
+	border-right: solid 1px;
+	padding: 0 10px 0 0;
+}
+
+button#displayTweet {
+	border-radius: 2px;
+	background: #2c3441;
+	border: solid 1px black;
+	padding: 5px 15px;
+	height: 40px;
+	width: 150px;
+	color: white;
+	margin: 0 20px 0 0;
+}
+
+button#displayTime {
+	border-radius: 2px;
+	background: lighgray;
+	border: solid 1px black;
+	padding: 5px 15px;
+	height: 40px;
+	width: 150px;
+	color: #2c3441;
+	margin: 0 20px 0 0;
+}
+
+#tweetsContainer {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#firstTweet {
+	text-align: center;
+	font-size: var(--title-font-size);
+	font-family: var(--title-font);
+	font-style: var(--title-font-style);
+	color: var(--tertiary-color);
+	margin: var(--small-space);
+}
+
+.tweets {
+	font-family: monospace;
+	font-size: 16px;
+	list-style: none;
+}
+
+#listTweets li {
+	background: rgba(255, 255, 255, 0.4);
+	margin: 0 0 var(--small-space) 0px;
+}
+
+.tweetInfoBox {
+	width: 100%;
+	display: inline-block;
+	padding: var(--small-space);
+	color: white;
+}
+
+.tweetInfoBox .tweetUser {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: var(--title-font-size);
+	color: var(--tertiary-color);
+}
+
+.tweetDate {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	font-size: 12px;
+	color: gray;
+}
+
+.tweetTextBox {
+	display: inline-block;
+	width: 100%;
+	padding: var(--small-space);
+	font-family: var(--main-font);
+}
+
+.tweetActionBox {
+	display: inline-block;
+	width: 100%;
+	padding: var(--small-space);
+}
+
+.tweetActionBox span {
+	border-top: solid 1px var(--tertiary-color);
+	display: inline-block;
+	width: 100%;
+	padding: var(--small-space) 0 0 0;
+}
+
+#listTweets li.fav {
+	background: rgba(61, 135, 138, 0.6);
+	border: solid 1px var(--tertiary-color);
+	border-radius: 2px;
+	color: white;
+}
+
+.fav .tweetDate {
+	color: white;
+}
+
+.tweetFav,
+.tweetFavRemove {
+	float: right;
+}
+
+.tweetFav {
+	border: solid 1px var(--tertiary-color);
+	border-radius: 50px;
+	padding: 2px var(--small-space);
+	color: var(--tertiary-color);
+	background: rgba(61, 135, 138, 0.1);
+}
+
+.tweetFavRemove {
+	display: none;
+	border: solid 1px white;
+	border-radius: 50px;
+	padding: 2px var(--small-space);
+	color: white;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+#listTweets li.fav .tweetFavRemove {
+	display: initial;
+}
+
+#listTweets li.fav .tweetFav {
+	display: none;
+}
